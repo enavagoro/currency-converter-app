@@ -13,7 +13,7 @@ interface auth {
 export class AuthService {
   private isAdmin: boolean = false;
   private userId: string = '';
-  private url: string = 'http://localhost:5100';
+  private url: string = 'https://currency-converter-api-hh5fq.ondigitalocean.app';
 
   constructor(private http: HttpClient) { }
 
