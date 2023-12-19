@@ -6,7 +6,7 @@ import { StorageService } from './storage.service';
     providedIn: 'root'
 })
 export class ConvertService {
-    private url: string = 'http://localhost:5100';
+    private url: string = 'https://currency-converter-api-hh5fq.ondigitalocean.app';
 
     constructor(private http: HttpClient, private storageService: StorageService) {
     }
