@@ -1,0 +1,135 @@
+.principal-container{
+    display: flex;
+    height: 100vh;
+  }
+
+  .left-container{
+    width: 50%;
+  }
+
+  .right-container{  
+    width: 50%;
+    background-image: url('https://cdn.statically.io/img/lh4.googleusercontent.com/proxy/-_jkhfOQOVuhPzaIn4CoubndOuV3es80DYIgjPr3I8RLCsBTpOzrnOLrvi7hj2Y2JGz-H8jLmGkdocVrnKwgz8pP5_mEPN7KyXbJJh4uYV57ugQqbwBU90MmetaW8XT0KvvvbUQAIkJino8m388lj3YYG5Ci8df31IzQeE8y_Y5Lwg=s0-d');
+    background: #4f72e7;
+  }
+
+
+  /* login */
+  
+  .login-form-container{
+    /* background: black; */
+    width: 50%;
+    margin-top: calc(50%/2);
+    margin-left: calc(50%/2);
+    animation: left-in .5s ease-in;
+  }
+  
+  .inputs-container{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  /* Mail Input container */
+  
+  .input-container{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-top: 3%;
+    border-radius: 6px;
+    background-color: rgb(233, 230, 230);
+  }
+  
+  .input-form{
+    width: 90%;
+    background-color: rgb(233, 230, 230);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 5%;
+    border: none;
+  }
+  
+  .input-form:active{
+    border: 0;
+  }
+  
+  .input-form:focus{
+    outline: none;
+  }
+
+  .link-registro-container{
+    animation: left-in .5s ease-in;
+  }
+
+  .link-registro{
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+  
+  /* login */
+
+  .login-button-container{
+    margin-top: 10%;
+   
+  }
+  
+  .login-button{
+    font-family: "Roboto", sans-serif;
+    /* text-transform: uppercase; */
+    outline: 0;
+    width: 100%;
+    margin-left: 0%;
+    border: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #4f72e7;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+
+  .logo-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .logo-background{
+    top: -50px;
+    filter: blur(3px);
+    position: absolute;
+  }
+  
+  .logo{
+    width: 100% !important;
+  }
+  
+  @keyframes left-in{
+    0%{
+      transform: translateX(-200%);
+    }
+    50%{
+      transform: translateX(30%);
+    }
+    70%{
+      transform: translateX(20%);
+    }
+    80%{
+      transform: translateX(10%);
+    }
+    90%{
+      transform: translateX(5%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+}

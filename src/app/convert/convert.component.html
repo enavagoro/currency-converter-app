@@ -1,0 +1,48 @@
+<div class="page-container">
+    <div class="button-session-container">
+        <button class="button-session" (click)="closeSession()">Cerrar sesión</button>
+    </div>
+
+    <h1 class="title-page">Convertidor de UF a CLP</h1>
+
+    <form [formGroup]="convertForm">
+        <div class="button-history-container" *ngIf="isAdmin">
+            <button class="button-history" (click)="routeTo('conversions')">Ver historial completo</button>
+        </div>
+
+        <div class="card-container">
+            <div class="input-container">
+                <h3 class="label-container">Cantidad en UF</h3>
+                <input class="input-form" formControlName="amount" placeholder="UF" type="number">
+            </div>
+    
+            <div class="date-container">
+                <h3 class="label-container">Fecha de la UF</h3>
+                <input class="input-form" formControlName="conversionDate" placeholder="UF" type="date">
+            </div>
+    
+            <div class="button-container">
+                <button *ngIf="!loadingButton" class="button" [disabled]="!convertForm.valid"  (click)="convert()">Convertir</button>
+                <button *ngIf="loadingButton" class="button">...Cargando</button>
+            </div>
+    
+            <div class="result-container" *ngIf="showResult">
+                <h1 class="result-title">Resultado de la conversion</h1>
+                <p class="result-label"><b>Fecha de la operación:</b> {{formatDate(result.operationDate)}}</p>
+                <p class="result-label"><b>Cantidad en UF:</b> {{result.amount}} </p>
+                <p class="result-label"><b>Valor de la UF:</b> {{result.currencyValue}} <b>con fecha</b> {{formatDate(result.conversionDate)}} </p>
+                <p class="result-label"><b>Valor en CLP:</b> {{result.convertedAmount}} </p>
+
+                <div class="button-container" *ngIf="isAdmin">
+                    <button class="button" (click)="routeTo('conversions')">Ver historial completo</button>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div style="height: 50px;">
+
+        </div>
+    </form>
+</div>

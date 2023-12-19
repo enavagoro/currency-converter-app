@@ -1,0 +1,25 @@
+<div class="principal-container">
+    <div class="left-container">
+        <form [formGroup]="loginForm">
+            <div class="login-form-container">
+                <div class="">
+                    <div class="input-container">
+                        <input class="input-form" placeholder="Correo" formControlName="email" type="email">
+                    </div>
+                    <div class="input-container">
+                        <input class="input-form" placeholder="Contraseña" formControlName="password" type="password" >
+                    </div>
+
+                    <div class="login-button-container">
+                        <button class="login-button" (click)="login()" [disabled]="!loginForm.valid">Iniciar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="right-container">
+        <div class=logo-background>
+        </div>
+    </div>
+</div>

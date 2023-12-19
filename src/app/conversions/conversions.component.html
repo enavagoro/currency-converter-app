@@ -1,0 +1,30 @@
+<div class="page-container">
+    <div class="button-session-container">
+        <button class="button-session" (click)="closeSession()">Cerrar sesión</button>
+    </div>
+    
+    <h1 class="title-page">Historial de conversiones</h1>
+    
+    <div class="button-container">
+        <button class="button" (click)="routeTo('convert')">Nueva conversion</button>
+    </div>
+
+    <div class="grid-container-title">
+        <div class="grid-item">Fecha de operación</div>
+        <div class="grid-item">Usuario</div>
+        <div class="grid-item">Cantidad en UF</div>
+        <div class="grid-item">Valor de la UF</div>
+        <div class="grid-item">Fecha de la UF</div>
+        <div class="grid-item">Valor en CLP</div>
+    </div>
+    <div class="grid-container-data" *ngFor="let conversion of conversions">
+        <div class="grid-item">{{formatDate(conversion.operationDate)}}</div>
+        <div class="grid-item">{{conversion.userId}}</div>
+        <div class="grid-item">{{conversion.amount}}</div>
+        <div class="grid-item">{{conversion.currencyValue}}</div>
+        <div class="grid-item">{{formatDate(conversion.conversionDate)}}</div>
+        <div class="grid-item">{{conversion.convertedAmount}}</div>
+    </div>
+
+    <div style="height: 50px"></div>
+</div>
